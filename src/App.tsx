@@ -1,20 +1,9 @@
-import './App.css';
-
-import { useState } from 'react';
-
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <p> Vite + React! + Typescript + Eslint + Prettier setup</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-      </header>
+    <div className="flex h-screen items-center justify-center bg-gradient-to-r from-purple-200 via-purple-400 to-purple-800">
+      <h1 className="text-lg font-semibold text-gray-100">
+        Vite Typescript Tailwind Starter for SPA
+      </h1>
     </div>
   );
 }
