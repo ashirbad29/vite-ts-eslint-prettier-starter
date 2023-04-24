@@ -3,11 +3,6 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
   extends: [
     'plugin:react/recommended',
     'standard',
@@ -19,10 +14,16 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 13,
-    sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'simple-import-sort', 'prettier'],
+  plugins: ['@typescript-eslint', 'react', 'simple-import-sort', 'prettier'],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',

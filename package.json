@@ -5,9 +5,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
-    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
-    "lint": "yarn lint:format && yarn lint:fix"
+    "format": "prettier --cache --write .",
+    "lint:format": "prettier --cache --check .",
+    "lint": "eslint . --cache --ext .jsx,.js,.ts,.tsx",
+    "lint:fix": "yarn lint --fix && yarn format"
   },
   "dependencies": {
     "clsx": "^1.2.1",
@@ -17,8 +18,8 @@
   "devDependencies": {
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.9.0",
-    "@typescript-eslint/parser": "^5.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
     "@vitejs/plugin-react": "^1.0.7",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.39.0",
